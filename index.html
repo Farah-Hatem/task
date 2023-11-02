@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your tasks</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <h1>Write down your tasks</h1>
+            <div class="tasks">
+                <h2>Your tasks:</h2>
+                <table>
+                    <tr>
+                        <th id="th1">no.</th>
+                        <th id="th2">task</th>
+                        <th id="th3">&#128077;</th>
+                    </tr>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="none"></td>
+                            <td id="delete-all" onclick="deleteAll()">delete all</td>
+                            <td class="none"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="add">
+                <h2>Add task</h2>
+                <input type="text" id="inp" required>
+                <!-- <div class="pls" id="pls">
+                    +
+                </div> -->
+                <button type="submit" id="pls" class="pls">+</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>All right reserved &copy;  Farah Hasan 2023</p>
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+</html>

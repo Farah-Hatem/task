@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --main-color: rgb(255, 96, 16);
+}
+::selection {
+    background-color: white;
+    color: var(--main-color);
+}
+.container {
+    width: 100%;
+}
+h1 {
+    margin: 20px auto;
+    text-align: center;
+    color: var(--main-color);
+}
+h1::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+.tasks {
+    background-color: var(--main-color);
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    height: 400px;
+    overflow-y:auto;
+    margin: 50px auto;
+    color: white;
+}
+.tasks h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+table {
+    font-size: 1.1em;
+    text-align: center;
+    width: 100%;
+}
+tr td:last-of-type {
+    cursor: pointer;
+    font-weight: 600;
+}
+tbody tr td:last-of-type:hover {
+    background-color: rgb(228, 76, 0);
+}
+table th {
+    text-align: center;
+    text-transform: uppercase;
+}
+table td {
+    text-wrap: wrap;
+    border: 1px solid;
+    padding: 20px;
+}
+/* td:nth-child(2) {
+    word-break: break-all;
+    word-wrap: break-word;
+} */
+td button {
+    padding: 10px;
+
+}
+table tfoot .none {
+    border: 1px solid var(--main-color);
+}
+#delete-all{
+    display: none;
+    background-color: rgb(228, 76, 0);
+}
+tfoot #delete-all {
+    cursor: pointer;
+}
+input:checked {
+    text-decoration: overline;
+}
+.add {
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+}
+.add h2 {
+    color: var(--main-color);
+}
+.add input {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    margin: 20px auto;
+    border: var(--main-color) solid 3px;
+    font-size: 1.1em;
+}
+.add input:focus {
+    outline: var(--main-color) solid 2px;
+}
+.add .pls {
+    background-color: var(--main-color);
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid white;
+    color: white;
+}
+.add .pls:hover {
+    background-color:  rgb(228, 76, 0);
+}
+#th1 {
+    width: 10%;
+}
+#th2 {
+    width: 80%;
+}
+#th3 {
+    width: 10%;
+}
+footer {
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px ) {
+    .tasks {
+        width: 90%;
+        padding: 20px 5px;
+        height: 500px;
+    }
+    .add {
+        width: 90%;
+    }
+    table {
+        width: 100%;
+    }
+    #th1 {
+        width: 5%;
+    }
+    #th2 {
+        width: 85%;
+    }
+    #th3 {
+        width: 5%;
+    }
+}
