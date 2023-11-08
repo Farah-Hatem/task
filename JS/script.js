@@ -10,13 +10,16 @@ else {
 }
 
 pls.onclick = function() {
-    let newtask = {
-        inp:inp.value,
+    if (inp.value != '') {
+        let newtask = {
+            inp:inp.value,
+        }
+        dataTask.push(newtask);
+        localStorage.setItem('task',JSON.stringify(dataTask));
+        clearData();
+        showData();
     }
-    dataTask.push(newtask);
-    localStorage.setItem('task',JSON.stringify(dataTask));
-    clearData();
-    showData();
+   
 }
 //clear data 
 function clearData() {
@@ -29,14 +32,16 @@ function showData() {
         row += `
         <tr>
             <td class="no">${i+1}</td>
-            <td>${dataTask[i].inp}</td>
-            <td class="delete" onclick="deleteData(${i})">done</td>
+            <td onclick="update(${i})">${dataTask[i].inp}</td>
+            <td class="delete" onclick="deleteData(${i})"><span class="material-symbols-outlined">
+            done
+            </span></td>
+            <td class="delete2" onclick="deleterow(${i})">-</td>
         </tr>
         `;
     }
     document.getElementById('tbody').innerHTML = row;
     let delAll = document.getElementById('delete-all');
-    let test = document.getElementsByTagName('tfoot')[0];
     if(dataTask.length > 0) {
         delAll.style.display = "block";
     }
@@ -61,5 +66,16 @@ function deleteData(i) {
 function deleteAll() {
     localStorage.clear();
     dataTask.splice(0);
+    showData();
+}
+//delete row  
+function deleterow(i) {
+    dataTask.splice(i,1);
+    localStorage.task = JSON.stringify(dataTask);
+    showData();
+}
+function update(i) {
+    let updata = window.prompt("Update " + dataTask[i].inp + " to:");
+    dataTask[i].inp = updata;
     showData()
 }
