@@ -39,14 +39,12 @@ table {
     text-align: center;
     width: 100%;
 }
-tr td:last-of-type {
+tr td:last-of-type, tr td:nth-child(3) {
     cursor: pointer;
-    font-weight: 600;
 }
-tbody tr td:last-of-type:hover {
+tbody tr td:last-of-type:hover, tr td:nth-child(3):hover {
     background-color: rgb(228, 76, 0);
-}
-table th {
+}table th {
     text-align: center;
     text-transform: uppercase;
 }
