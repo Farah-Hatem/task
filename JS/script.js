@@ -36,7 +36,10 @@ function showData() {
             <td class="delete" onclick="deleteData(${i})"><span class="material-symbols-outlined">
             done
             </span></td>
-            <td class="delete2" onclick="deleterow(${i})">-</td>
+            <td class="delete2" onclick="deleterow(${i})"><span class="material-symbols-outlined">
+            delete
+            </span>
+            </td>
         </tr>
         `;
     }
